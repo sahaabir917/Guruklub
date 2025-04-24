@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.friendrequest.AddFriendFragment">
+
+
+
+            <EditText
+                android:id="@+id/search_friend_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="searching..."
+                android:background="@drawable/friend_searching_bg"
+                android:paddingLeft="@dimen/dp_15"
+                android:textColor="@color/newwhite"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textColorHint="#8020b8"
+                android:paddingRight="@dimen/dp_5"
+                android:drawableRight="@drawable/friend_searching_search"/>
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlfriendsuggestion"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_friend_suggestion"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical="@drawable/game_scrolbar_thumb"
+            android:scrollbars="vertical"
+            />
+
+
+    </LinearLayout>
+
+
+</layout>

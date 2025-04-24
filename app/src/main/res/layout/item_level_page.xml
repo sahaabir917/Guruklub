@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutSingleLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView36"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginRight="@dimen/dp_5"
+            android:adjustViewBounds="true"
+            android:src="@drawable/item_game_level_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivLockSymbol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/level_lock_png"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintEnd_toEndOf="@+id/imageView36" />
+
+        <RelativeLayout
+            android:id="@+id/rlUserIcon"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_white_border_game"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintEnd_toEndOf="@+id/imageView36">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icvUserIcon"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_1"
+                android:src="@drawable/ic_placeholder_user" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="1"
+            android:textColor="@color/newwhite"
+            android:textSize="@dimen/sp_30"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imageView36"
+            app:layout_constraintEnd_toEndOf="@+id/imageView36"
+            app:layout_constraintStart_toStartOf="@+id/imageView36"
+            app:layout_constraintTop_toTopOf="@id/imageView36" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

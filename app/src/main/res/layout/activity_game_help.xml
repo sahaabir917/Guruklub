@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.termsAndCondition.TermsConditionActivity">
+
+    <include  android:id="@+id/toolbar"
+         layout="@layout/toolbar_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryNew"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_marginStart="@dimen/dp_35"
+            android:layout_marginEnd="@dimen/dp_35"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/white" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/dp_35"
+            android:layout_marginEnd="@dimen/dp_35"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="9sp"
+            android:textColor="@color/newwhite"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Exam Rules"
+            android:layout_below="@+id/view1"/>
+
+        <View
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginStart="@dimen/dp_35"
+            android:layout_marginEnd="@dimen/dp_35"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:id="@+id/toc_sv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/ok_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/web_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:visibility="gone"
+                android:lineSpacingExtra="7sp"
+                android:textColor="@color/newblack"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/ok_btn"
+        android:layout_width="160dp"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/bg_btn_accent"
+        android:text="Okay"
+        android:textAllCaps="false"
+        android:textSize="@dimen/buttontextsize"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toc_sv"
+        app:layout_constraintStart_toStartOf="@+id/toc_sv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

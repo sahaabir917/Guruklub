@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/play_pause_button"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_gravity="center"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_play_png_icon"
+        android:text="Play" />
+
+</FrameLayout>

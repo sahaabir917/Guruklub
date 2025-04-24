@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_live_exam_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/start_game_tv">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutBorder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@drawable/bg_outlined_primary_live_exam"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_3"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/dp_5">
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_live_exam_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:background="@drawable/bg_live_exam_title"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/textView_live_top"
+                            app:srcCompat="@drawable/ic_live_exam" />
+
+                        <TextView
+                            android:id="@+id/textView_live_top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Live Exam"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/relativelayout_live_exam_top">
+
+                        <TextView
+                            android:id="@+id/textViewExamTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_16"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/bg_btn_accent"
+                            android:backgroundTint="@color/lightOrange"
+                            android:paddingStart="@dimen/dp_5"
+                            android:paddingLeft="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:paddingRight="@dimen/dp_5"
+                            android:text="Coming soon"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Time of exam: 10 Jan 2021, 10:30 PM" />
+
+
+                        <TextView
+                            android:id="@+id/textView_exam_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="No exam available"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewExamTime"
+                            tools:text="Primary Preliminary Examination Examination" />
+
+
+                        <TextView
+                            android:id="@+id/textView_countdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:drawableLeft="@drawable/ic_timer2"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_exam_name"
+                            tools:text="00:00:00" />
+
+
+                        <TextView
+                            android:id="@+id/btnJoinNowOrStartTest"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_28"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:background="@drawable/bg_btn"
+                            android:paddingStart="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:text="Start Test"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#fafcfb"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnSyllabus"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_countdown" />
+
+                        <TextView
+                            android:id="@+id/btnSyllabus"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_28"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:background="@drawable/bg_btn_outline_primary"
+                            android:paddingStart="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:text="Details"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/btnJoinNowOrStartTest"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_countdown" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_free_tag_rv"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@drawable/bg_free_circle">
+
+                <TextView
+                    android:id="@+id/heart_cost_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dp_5"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_9" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

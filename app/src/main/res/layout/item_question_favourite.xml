@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bg_calender_layout"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:lineSpacingExtra="8sp"
+        android:scrollbars="none"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:engine="MathJax"
+        app:layout_constraintEnd_toStartOf="@+id/bookmark_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/tvAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="7sp"
+        android:scrollbars="none"
+        android:textColor="#616161"
+        app:layout_goneMarginBottom="10dp"
+        android:textSize="13sp"
+        app:engine="MathJax"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bookmark_iv"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/unbookmark_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_marginEnd="18dp"
+        android:tint="#BF0000"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

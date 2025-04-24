@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:context=".view.activity.termsAndCondition.TermsConditionActivity">
+
+
+        <ImageView
+            android:id="@+id/game_rules_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/setting_page_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/ruleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="92dp"
+            android:text="Game Hearts"
+            android:textColor="@color/newwhite"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/close_btn_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/game_rules_bg" />
+
+        <ImageView
+            android:id="@+id/close_btn_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/close_btn_bg_deepblue"
+            app:layout_constraintEnd_toEndOf="@+id/game_rules_bg"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ruleTitle"
+            app:layout_constraintTop_toTopOf="@+id/game_rules_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ruleTitle"
+            android:background="@drawable/bg_score_dark"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/game_rules_bg"
+            app:layout_constraintStart_toStartOf="@+id/game_rules_bg"
+            app:layout_constraintTop_toBottomOf="@+id/ruleTitle"
+            app:layout_constraintVertical_bias="0.42">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="Your have no hearts..."
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvPurchaseNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/yellow_box_with_colorfull_bg"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:shadowColor="@color/newGray"
+                    android:shadowDx="4"
+                    android:shadowDy="6"
+                    android:shadowRadius="10"
+                    android:text="Collect Now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

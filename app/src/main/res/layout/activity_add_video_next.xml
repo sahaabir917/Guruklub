@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activity.login.AddVideoNextActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+
+        <LinearLayout
+            android:background="@color/colorPrimaryNew"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingLeft="@dimen/dp_25"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="normal"
+                android:layout_marginStart="@dimen/dp_2"
+                android:textSize="@dimen/text_titlebar"
+                android:gravity="center_vertical"
+                android:text="Add Topic"
+                android:textColor="@color/newwhite"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_25"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/spSubjectlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spSectionlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spTopicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spTopic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_ash_border">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spDifficulty"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_height="@dimen/dp_40" />
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_btn_accent"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttontextsize"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/btnBack"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_size"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_btn_accent"
+                    android:text="Go Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttontextsize"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/btnNext"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

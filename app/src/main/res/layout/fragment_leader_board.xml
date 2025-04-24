@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rlParticipationSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="15dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_dropdown_arrow"
+                android:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvModelTestName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@+id/ivArrow"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Select Live Exam"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTotalParticipate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvModelTestName"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/ivArrow"
+                android:lineSpacingExtra="16sp"
+                android:text="tap here to select a live exam to show leader board data"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:background="@color/newwhite"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+
+
+
+            <EditText
+                android:id="@+id/search_model_test"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/rounded_shape"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:layout_weight="1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/rvParticipationName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                android:background="@color/super_light_grey"
+                android:elevation="1dp"
+                android:layout_weight="8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <Button
+                android:gravity="center"
+                android:layout_weight=".9"
+                android:id="@+id/register_model_test_btn"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_btn_accent"
+                android:textColor="@drawable/primary_btn_text_color"
+                android:text="Register For Live Exam Now!"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textSize="@dimen/buttontextsize"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llLeaderBoardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlParticipationSelector">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Position"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Score"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llLeaderBoardTitle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/empty_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="No Data Found"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/myPositionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:orientation="horizontal"
+                    android:background="@color/own_leader_board"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlNoParticipation"
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="You have not participated in this exam."
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvMyPosition"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        tools:text="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvMyName"
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        tools:text="Mushfique, Dhaka"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvMyScore"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        tools:text="123/200"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLeaderBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:listitem="@layout/item_leader_board" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <ProgressBar
+                android:id="@+id/loading_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/empty_view_layout"
+            android:elevation="3dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="No Live Exam Data Found"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

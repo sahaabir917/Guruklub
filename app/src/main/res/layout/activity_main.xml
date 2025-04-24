@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="layout/activity_main_0">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar_layout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notice_rl"
+                    android:background="@color/home_page_first_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.gmpire.guruklub.util.NonSwipeableViewPager
+                        android:id="@+id/home_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/linearLayout_ad_container"
+                         />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout_nav_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/ll_tab_layout" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_ad_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/ll_tab_layout"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_16"
+                            android:clickable="false" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/ll_tab_layout">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlAdContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/ll_tab_layout"
+                                android:layout_centerInParent="true">
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/add_space"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_above="@id/ll_tab_layout"
+                                android:layout_marginBottom="@dimen/dp_1"
+                                android:background="#AAAAAA"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:lineSpacingExtra="@dimen/sp_11"
+                                android:text="for ad space"
+                                android:textAllCaps="true"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/sp_18"
+                                android:visibility="invisible" />
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_16"
+                            android:clickable="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightAsh"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            android:visibility="gone" />
+
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/home_tab_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:background="@color/lightAsh"
+                            android:paddingTop="0dp"
+                            ads:tabPaddingBottom="0dp"
+                            ads:tabPaddingTop="0dp"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabPaddingEnd="0dp"
+                            app:tabPaddingStart="0dp"
+                            app:tabSelectedTextColor="@color/colorAccent" />
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.5"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/loaderRlView_main_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5BB1A0A0"
+                android:visibility="gone">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    style="@style/SpinKitView.Large.MultiplePulse"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:visibility="visible"
+                    app:SpinKit_Color="@color/colorAccent" />
+
+            </RelativeLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/nav_header"
+                        layout="@layout/navigation_header_layout" />
+
+                    <include
+                        android:id="@+id/nav_menu"
+                        layout="@layout/navigation_menu_layout" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

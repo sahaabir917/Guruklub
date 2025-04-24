@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/subscribe_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_22"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@drawable/subsricbe_bg"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:fontFamily="@font/poppins_bold"
+            android:shadowColor="@color/newGray"
+            android:shadowDx="3"
+            android:shadowDy="6"
+            android:shadowRadius="10"
+            android:text="7 Days- 20Tk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="Unlimited Heart For 15 Days"
+            android:textColor="@color/newwhite"
+            android:textSize="@dimen/text_small1"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25"
+            app:layout_constraintVertical_bias="0.152" />
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/subscribe_switch_off_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView27"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

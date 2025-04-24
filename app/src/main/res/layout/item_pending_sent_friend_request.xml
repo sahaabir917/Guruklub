@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView14"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/ic_placeholder_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:maxLines="1"
+            android:text="Nazmus sakib Dip"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level 0"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@color/gamepageusertitlecolor"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/yellow_box_with_colorfull_bg"
+            android:text="cancel"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_name" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

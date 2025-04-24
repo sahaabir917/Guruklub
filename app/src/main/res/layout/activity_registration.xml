@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rlIvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_150"
+                android:layout_margin="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_36"
+                android:src="@drawable/comment_logo"/>
+
+
+            <ImageView
+                android:id="@+id/ivTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:lineSpacingExtra="6sp"
+                android:src="@drawable/ic_cha"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/email_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_input_outlined"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="14dp"
+                android:drawableTint="@color/colorPrimaryText"
+                android:ems="10"
+                android:hint="Email/Mobile"
+                android:padding="12dp"
+                android:paddingStart="@dimen/dp_14"
+                android:textColor="@color/colorPrimaryText"
+                android:textColorHint="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlIvTitle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_tl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:fontFamily="@font/poppins_family"
+                android:textColorHint="@color/colorPrimaryText"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/email_et"
+                app:layout_constraintStart_toStartOf="@+id/email_et"
+                app:layout_constraintTop_toBottomOf="@+id/email_et"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimaryText">
+
+                <EditText
+                    android:id="@+id/password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_input_outlined"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:drawablePadding="14dp"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_family"
+                    android:hint="Create New Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="@+id/email_et"
+                    app:layout_constraintStart_toStartOf="@+id/email_et"
+                    app:layout_constraintTop_toBottomOf="@+id/email_et" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_tl1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:fontFamily="@font/poppins_family"
+                android:textColorHint="@color/colorPrimaryText"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/password_tl"
+                app:layout_constraintStart_toStartOf="@+id/password_tl"
+                app:layout_constraintTop_toBottomOf="@+id/password_tl"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimaryText">
+
+            <EditText
+                android:id="@+id/confirm_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_input_outlined"
+                android:drawableLeft="@drawable/ic_retype_password"
+                android:drawableStart="@drawable/ic_retype_password"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Retype Password"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/colorPrimaryText"
+                android:textColorHint="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/password_tl"
+                app:layout_constraintStart_toStartOf="@+id/password_tl"
+                app:layout_constraintTop_toBottomOf="@+id/password_tl" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/show_password_cb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:buttonTint="@color/white"
+                android:text="Show Password"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/cbTermsAndConditions"
+                app:layout_constraintStart_toStartOf="@+id/password_tl1"
+                app:layout_constraintTop_toBottomOf="@+id/password_tl1" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbTermsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_password_cb"
+                app:layout_constraintEnd_toStartOf="@+id/tvTermsAndConditions"
+                app:layout_constraintTop_toTopOf="@+id/show_password_cb" />
+
+            <TextView
+                android:id="@+id/tvTermsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms &amp; Conditions"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="@+id/cbTermsAndConditions"
+                app:layout_constraintEnd_toEndOf="@+id/password_tl1"
+                app:layout_constraintTop_toTopOf="@+id/cbTermsAndConditions" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/bg_btn_primary"
+                android:text="Create New Account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttontextsize"
+                android:minHeight="0dp"
+                android:padding="@dimen/dp_8"
+               android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/password_tl"
+                app:layout_constraintStart_toStartOf="@+id/password_tl"
+                app:layout_constraintTop_toBottomOf="@+id/cbTermsAndConditions" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

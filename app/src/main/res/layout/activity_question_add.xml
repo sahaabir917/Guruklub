@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        tools:context="com.gmpire.guruklub.view.activity.question.QuestionAddActivity">
+
+        <RelativeLayout
+            android:id="@+id/toolbarlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_layout" />
+
+        </RelativeLayout>
+
+       <TextView
+           android:id="@+id/title_layout2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Add Question"
+           android:textColor="@color/newwhite"
+           android:textSize="@dimen/text_titlebar"
+           android:layout_marginTop="@dimen/dp_35"
+           android:layout_marginLeft="@dimen/dp_25"
+           android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/titlebar_layout"
+            android:background="@color/colorPrimaryNew"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingLeft="@dimen/dp_25"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="normal"
+                android:textSize="@dimen/sp_14"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_vertical"
+                android:text="Add Question"
+                android:textColor="@color/newwhite"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/question_add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_25"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                    <com.gmpire.guruklub.view.customView.CustomAutoCompleteTextView
+                        android:id="@+id/actvQuestionTitle"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:imeOptions="actionNext"
+                        android:hint="Question title"
+                        android:textStyle="bold"
+                        android:textColor="@color/newblack"
+                        android:background="@drawable/bg_ash_border"
+                        android:inputType="text"
+                        android:textSize="@dimen/dp_12"
+                        android:maxLines="1" />
+
+
+
+                <ProgressBar
+                    android:id="@+id/pbQuestionAdd"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/spSubjectlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/spSectionlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/spTopicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_ash_border"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spTopic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:pointerIcon="none" />
+
+                    <ImageView
+                        android:id="@+id/dropdown_icon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:src="@drawable/ic_down_arrow_black_png" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_ash_border">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spDifficulty"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_height="@dimen/dp_40" />
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_btn_accent"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/buttontextsize"
+                    android:textColor="@drawable/primary_btn_text_color"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/btnBack"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_size"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_btn_accent"
+                    android:text="Go Back"
+                    android:textSize="@dimen/buttontextsize"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/primary_btn_text_color"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/btnNext"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

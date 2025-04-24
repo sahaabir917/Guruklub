@@ -1,0 +1,256 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/poppinsTextViewStyle</item>
+        <item name="android:fontFamily">@font/poppins_family</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--    <style name="aurth" parent="AppTheme">-->
+    <!--        <item name="android:windowBackground">@drawable/landmark_image</item>-->
+    <!--    </style>-->
+
+    <style name="FullScreenDialogTheme.Dark" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+
+    <style name="poppinsTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/poppins_family</item>
+        <item name="android:textSize">@dimen/text_primary</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.DialogStyle" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#00000000</item>
+    </style>
+
+    <style name="MyTabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
+    </style>
+
+    <style name="MyTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">true</item>
+        <item name="android:background">@drawable/ic_dropdown_arrow</item>
+    </style>
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="profileDetailsLayout" parent="parent">
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="headerText" parent="parent">
+        <item name="android:textSize">@dimen/text_primary</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textInputHintStyle" parent="TextAppearance.AppCompat.Medium.Inverse">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="profileDetailsImage">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+
+    <style name="profileDetailsTextMain" parent="viewParent">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="profileDetailsMiniText" parent="viewParent">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="proifleDetailsView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="profileStyledBackButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ic_back_white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:drawableLeft">@drawable/ic_back_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:minWidth">250dp</item>
+    </style>
+
+    <style name="TransparentBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TransparentBottomSheetStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TransparentBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- TabLayout Style -->
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">@color/lightBlue</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyCustomTabLayout2" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@null</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">@drawable/tab_color_selector</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#8A8A8A</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="FacebookLoginButton">
+        <item name="android:background">@drawable/ic_facebook</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="DialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/red</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="windowFixedHeightMajor">50%</item>
+        <item name="windowFixedHeightMinor">50%</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="android:Theme.Dialog">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="DialogStyleDialogMultiSelect" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="windowFixedHeightMajor">100%</item>
+        <item name="windowFixedHeightMinor">100%</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="DialogStyle1" parent="android:Theme.Dialog">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="windowFixedHeightMajor">50%</item>
+        <item name="windowFixedHeightMinor">50%</item>
+    </style>
+
+    <style name="DialogStyle2" parent="android:Theme.Dialog">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:windowBackground">@color/semi_transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="windowFixedHeightMajor">50%</item>
+        <item name="windowFixedHeightMinor">50%</item>
+    </style>
+
+    <style name="BottomTabBarButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

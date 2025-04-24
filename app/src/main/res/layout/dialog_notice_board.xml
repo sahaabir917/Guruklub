@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        app:cardCornerRadius="@dimen/dp_20"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@color/colorPrimaryNew" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="GuruKlub"
+                    android:textColor="@color/white"
+                    android:textFontWeight="30"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_notice_board" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGotIt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/bg_btn_accent"
+                android:paddingStart="@dimen/dp_40"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_40"
+                android:text="Okay, Got It"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/dp_5" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

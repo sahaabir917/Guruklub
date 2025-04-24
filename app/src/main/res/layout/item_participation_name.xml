@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="#fff">
+
+
+        <Button
+            android:id="@+id/your_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_btn_accent"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="@dimen/dp_5"
+            android:text="@string/view_your_position"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvModelTestName" />
+
+        <View
+            android:id="@+id/viewparticipation"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivParticipationSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTotalParticipants"
+            app:layout_constraintStart_toStartOf="@+id/viewparticipation"
+            app:layout_constraintTop_toTopOf="@+id/tvModelTestName" />
+
+        <TextView
+            android:id="@+id/tvModelTestName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingEnd="@dimen/dp_5"
+            android:textSize="@dimen/text_primary"
+            app:layout_constraintEnd_toStartOf="@+id/your_position"
+            app:layout_constraintStart_toEndOf="@+id/ivParticipationSelection"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Model test -201 Testinggggggg" />
+
+        <TextView
+            android:id="@+id/tvTotalParticipants"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/newAshColor"
+            android:textSize="@dimen/text_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/tvModelTestName"
+            app:layout_constraintStart_toStartOf="@+id/tvModelTestName"
+            app:layout_constraintTop_toBottomOf="@+id/tvModelTestName"
+            tools:text="Total Participants - 40000" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="@+id/tvTotalParticipants"
+            app:layout_constraintStart_toStartOf="@+id/tvTotalParticipants"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalParticipants">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="Top Scorer : "
+                android:textColor="@color/colorAccentNew"
+                android:textSize="@dimen/sp_12" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/top_scorer_image"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_toEndOf="@+id/textView11"
+                android:src="@drawable/ic_placeholder_user" />
+
+            <TextView
+                android:id="@+id/top_scorer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toEndOf="@+id/top_scorer_image"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="Donald Trump"
+                android:textColor="@color/colorAccentNew"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

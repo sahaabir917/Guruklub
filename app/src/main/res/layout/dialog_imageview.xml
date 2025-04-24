@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<!--        <com.github.chrisbanes.photoview.PhotoView-->
+<!--            android:id="@+id/photo_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_height="match_parent"/>-->
+
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photo_view"
+            android:src="@drawable/landmark_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="photo_view"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="10dp"
+            tools:targetApi="lollipop" />
+
+        <ImageView
+            android:id="@+id/btn_cancel"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="40dp"
+            android:padding="10dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close_icon"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

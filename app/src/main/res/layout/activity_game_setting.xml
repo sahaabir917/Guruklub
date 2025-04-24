@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/TransparentBottomSheetDialogTheme"
+        tools:context=".view.dialog.gameLevel.GameSettingDialog">
+
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/setting_page_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/rlBgMusic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/deep_blue_with_black_bg_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/rlGameSound"
+            app:layout_constraintEnd_toEndOf="@+id/imageView22"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_20"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Background Music"
+                android:textColor="@color/newwhite"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/game_music_toggle_btn"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:src="@drawable/subscribe_switch_off_btn"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlGameSound"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/deep_blue_with_black_bg_large"
+            app:layout_constraintEnd_toEndOf="@+id/imageView22"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@+id/rlBgMusic"
+            app:layout_constraintBottom_toTopOf="@+id/textView23"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/textViewGameSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Game Sound"
+                android:layout_centerVertical="true"
+                android:textColor="@color/newwhite"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"/>
+
+
+            <ImageView
+                android:id="@+id/game_sound_toggle_btn"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:visibility="visible"
+                android:src="@drawable/subscribe_switch_off_btn"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Settings"
+            android:textColor="@color/newwhite"
+            android:layout_marginBottom="@dimen/dp_28"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toTopOf="@+id/rlBgMusic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/close_btn_iv" />
+
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/large_yellow_box_with_colorfull_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:shadowColor="@color/newGray"
+            android:shadowDx="4"
+            android:shadowDy="6"
+            android:shadowRadius="10"
+            android:textColor="@color/newwhite"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_24"
+            app:layout_constraintBottom_toTopOf="@+id/subscribetext"
+            app:layout_constraintEnd_toEndOf="@+id/imageView22"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@id/rlGameSound"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/subscribetext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/sp_16"
+            android:background="@drawable/large_yellow_box_with_colorfull_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:shadowColor="@color/newGray"
+            android:shadowDx="4"
+            android:shadowDy="6"
+            android:shadowRadius="10"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:text="Subscribe For Unlimited Hearts"
+            android:textColor="@color/newwhite"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="@+id/imageView22"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/close_btn_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_30"
+            android:src="@drawable/close_btn_bg_deepblue"
+            app:layout_constraintBottom_toTopOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="@+id/imageView22"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toTopOf="@+id/imageView22" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

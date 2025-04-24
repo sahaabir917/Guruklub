@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">GuruKlub</string>
+    <string name="code_404">404</string>
+    <string name="code_401">401</string>
+    <string name="code_200">200</string>
+    <string name="key_livedata_login">login</string>
+    <string name="capture">Capture</string>
+    <string name="browse">Browse</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear All</string>
+    <string name="done">Done</string>
+
+    <!--    <string name="facebook_app_id">3272355102867639</string>
+    <string name="fb_login_protocol_scheme">fb3272355102867639</string>-->
+    <string name="facebook_app_id">536977780340169</string>
+    <string name="fb_login_protocol_scheme">fb536977780340169</string>
+    <string name="youtube_v3_key">AIzaSyAjx-xCXEjnU4dBVjdpnw3_rabVyr5M3iA</string>
+
+    <string name="duplicate_ques_warning">Duplicate question can not be submitted to server.</string>
+
+    <string name="ad_unit_id_banner_home">ca-app-pub-2665580747359981/7882777800</string>
+    <string name="ad_unit_id_banner_ques_det">ca-app-pub-2665580747359981/9347811792</string>
+    <string name="ad_unit_id_banner_info_centre">ca-app-pub-2665580747359981/1469321775</string>
+    <string name="ad_unit_id_banner_game">ca-app-pub-2665580747359981/6436455840</string>
+    <string name="ad_unit_id_banner_batch_question">ca-app-pub-2665580747359981/4680223298</string>
+    <string name="ad_unit_id_native_question_list">ca-app-pub-2665580747359981/2036916531</string>
+    <string name="ad_unit_id_interstitial_home">ca-app-pub-2665580747359981/1553082259</string>
+    <string name="ad_unit_id_interstitial_game">ca-app-pub-2665580747359981/7114814946</string>
+    <string name="ad_unit_id_interstitial_batch_question">ca-app-pub-2665580747359981/8283719822</string>
+    <string name="ad_unit_id_interstitial_info_centre">ca-app-pub-2665580747359981/7689943010</string>
+    <string name="ad_unit_id_interstitial_video">ca-app-pub-2665580747359981/6787639477</string>
+    <string name="ad_unit_id_reward_model_test">ca-app-pub-2665580747359981/1718311473</string>
+    <string name="ad_unit_id_reward_live_exam">ca-app-pub-2665580747359981/6779066466</string>
+    <string name="ad_unit_id_reward_game">ca-app-pub-2665580747359981/5160729745</string>
+    <string name="ad_unit_id_interstitial_ques_det">ca-app-pub-2665580747359981/9721229468</string>
+
+    <string name="ad_unit_id_banner_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_unit_id_interstitial_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_unit_id_reward_test">"ca-app-pub-3940256099942544/5224354917"</string>
+    <string name="ad_unit_id_native_test">"ca-app-pub-3940256099942544/2247696110"</string>
+
+    <string name="sandbox_ssl_store_id">sdcol603ccde6c82bd</string>
+    <string name="sandbox_ssl_store_pw">sdcol603ccde6c82bd@ssl</string>
+
+    <array name="performance_spinner_items">
+        <item>Select an option</item>
+        <item>Subject Based Performance</item>
+        <item>Section Based Performance</item>
+        <item>Topic Based Performance</item>
+    </array>
+
+    <string name="create_exam">Custom Exam</string>
+    <string name="not_registered_msg">You are not registered for this exam.</string>
+    <string name="related_video">Related Videos</string>
+    <string name="gist">Gist</string>
+    <string name="filternews">Filter</string>
+    <string name="exam_centre_label">Select Exam Type</string>
+    <string name="total_questions">Total Questions</string>
+    <string name="time">Time</string>
+    <string name="marks">Marks</string>
+    <string name="my_dashboard">My Dashboard</string>
+    <string name="recent_performance">Recent Exam</string>
+    <string name="performance_history">Exam History</string>
+    <string name="leaderboard">Live Exam Result</string>
+    <string name="errors">My Errors</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="view_all_comments">View All Comments</string>
+    <string name="view_your_position">View Position</string>
+    <string name="no_exam_available_currently">No exam available currently</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_rules_title">Game Rules</string>
+    <string name="invite_friend_title">Invite Friends</string>
+    <string name="invite_friend_text">You\'ve invited your friend to join the GuruKlub! You will get the heart bonus as soon as your friend uses the REFERRAL CODE &amp; starts to use this app.</string>
+    <string name="invite_friend_text2">You have to invite your friend to join the GuruKlub! You will get the heart bonus as soon as your friend uses the REFERRAL CODE &amp; starts to use this app.</string>
+    <string name="levle_complete_title">Level Completed></string>
+    <string name="levle_complete_text">Congratulations! You completed this level successfully!</string>
+    <string name="game_level_up_congrats">You have successfully completed level:  </string>
+    <string name="add_question_text">Add Question Rules</string>
+    <string name="add_question_text_details">You will get heart bonus whenever your question will be approved. Would you like to proceed?</string>
+    <string name="share_now"><u>Share Now</u></string>
+    <string name="know_more"><u>Know More</u></string>
+    <string name="findyourvideo">Find Your Youtube Video</string>
+    <string name="openyoutube">Open Youtube</string>
+    <string name="invitation_success_text">Thanks for inviting friends! If your friend use your REFERRAL CODE, We will notify you and then you\'ll get hearts for each friend joining!</string>
+    <string name="a_challenge_is_waiting_for_you">A challenge is waiting for you!</string>
+    <string name="already_participated">You\'ve already participated!</string>
+    <string name="finish"><u>Finish</u></string>
+</resources>

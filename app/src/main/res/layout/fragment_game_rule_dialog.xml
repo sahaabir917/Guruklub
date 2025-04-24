@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.termsAndCondition.TermsConditionActivity">
+
+
+        <ImageView
+            android:id="@+id/game_rules_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:paddingRight="@dimen/dp_5"
+            android:src="@drawable/setting_page_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/ruleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/newwhite"
+            android:fontFamily="@font/poppins_bold"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintBottom_toBottomOf="@+id/game_rules_bg"
+            app:layout_constraintEnd_toEndOf="@+id/game_rules_bg"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/game_rules_bg"
+            app:layout_constraintTop_toTopOf="@+id/game_rules_bg"
+            app:layout_constraintVertical_bias="0.17000002"
+            tools:text="Game Rules" />
+
+
+        <ImageView
+            android:id="@+id/close_btn_iv"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:src="@drawable/close_btn_bg_deepblue"
+            app:layout_constraintBottom_toBottomOf="@+id/ruleTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toEndOf="@+id/ruleTitle"
+            app:layout_constraintTop_toTopOf="@+id/game_rules_bg"
+            app:layout_constraintVertical_bias="0.77" />
+
+
+        <RelativeLayout
+            android:id="@+id/scrollView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_34"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:fillViewport="true"
+            android:background="@drawable/bg_score_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/game_rules_bg"
+            app:layout_constraintBottom_toTopOf="@+id/okBtnLayout"
+            app:layout_constraintEnd_toEndOf="@+id/game_rules_bg"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="@+id/game_rules_bg"
+            app:layout_constraintTop_toBottomOf="@+id/ruleTitle"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <WebView
+                android:id="@+id/game_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/dp_15"
+                android:layerType="software"
+                android:textColor="@color/newwhite"
+                android:textSize="@dimen/sp_13"
+                android:visibility="visible"
+                tools:text="sdksdfkshfkhsdkfhsd" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/okBtnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/game_rules_bg"
+            app:layout_constraintEnd_toEndOf="@+id/scrollView4"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/scrollView4"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yellow_box_with_colorfull_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:shadowColor="@color/newGray"
+                android:shadowDx="4"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="OK"
+                android:textColor="@color/newwhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

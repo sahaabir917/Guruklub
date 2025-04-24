@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_option_default"
+    android:orientation="horizontal"
+    android:padding="3dp">
+
+
+    <ImageView
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_10"
+        app:srcCompat="@drawable/ic_star" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textViewOptionGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            tools:text="Lorem Ipsum is simply m is sim "
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small" />
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/mathViewOptionGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/sp_5"
+            android:layout_marginStart="8dp"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:layout_gravity="center_vertical"
+            android:scrollbars="none"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            app:engine="MathJax" />
+
+    </FrameLayout>
+
+</LinearLayout>
+

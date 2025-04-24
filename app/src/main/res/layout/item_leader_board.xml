@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_live_exam_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/cardView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="11dp"
+                android:background="@drawable/leader_board_rounded_shape"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_3"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_85"
+                    android:paddingBottom="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Mushfique, Dhaka"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlPosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@drawable/isb_indicator_square_corners"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvPosition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_5"
+                            android:text="1st position"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/levelnumber1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlPosition"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@drawable/bg_btn_accent"
+                        android:backgroundTint="@color/lightGreen"
+                        android:gravity="center"
+                        android:text="Lever : 97"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/examdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/levelnumber1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="1 December 2012"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/examdate"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_btn_accent"
+                        android:backgroundTint="@color/ash"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/dp_5"
+                        android:text="123/200"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_free_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_placeholder_user" />
+
+                <ImageView
+                    android:id="@+id/trophypic"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_below="@+id/profile_pic"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/ic_trophy_leaderboard" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_5">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_rounded_red"
+            android:backgroundTint="@color/lightBrick"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+
+    </RelativeLayout>
+
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/radio_btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:scrollbars="none"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        tools:text="ASDASDASDSDASDdasdasdasdasdasdasdasd" />
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+package com.gmpire.guruklub.view.adapter
+
+import android.content.Context
+import androidx.databinding.ViewDataBinding
+import com.bumptech.glide.Glide
+import com.gmpire.guruklub.BuildConfig
+import com.gmpire.guruklub.R
+import com.gmpire.guruklub.data.model.login.UserInfo
+import com.gmpire.guruklub.databinding.ItemFriendSuggestionBinding
+import com.gmpire.guruklub.databinding.ItemPendingRecivedFriendRequestBinding
+import com.gmpire.guruklub.databinding.ItemPendingSentFriendRequestBinding
+import com.gmpire.guruklub.view.base.BaseViewHolder
+
+class PendingsentFriendRequestViewHolder(itemView: ViewDataBinding,
+                                 context: Context?): BaseViewHolder(itemView.root) {
+
+    var binding = itemView as  ItemPendingSentFriendRequestBinding
+    var mContext = context
+    override fun <T> onBind(position: Int, itemModel: T, listener: IAdapterListener) {
+        itemModel as UserInfo
+        binding.userName.text = itemModel.name
+        binding.textView21.text =  "level : " + itemModel.user_game_level
+
+        binding.button3.setOnClickListener{
+            binding.button3.text = "Canceled"
+            listener.callBack(position,itemModel,binding.root)
+        }
+
+        if (itemModel.picture != null) {
+            Glide.with(mContext!!)
+                .load(BuildConfig.SERVER_URL+itemModel.picture)
+                .into(binding.imageView14)
+        } else {
+            binding.imageView14.setImageResource(R.drawable.ic_placeholder_user)
+        }
+
+    }
+
+    override fun onBind(position: Int, mCallback: IAdapterListener) {
+
+    }
+
+}

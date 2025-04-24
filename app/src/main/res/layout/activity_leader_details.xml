@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.leaderDetailsActivity.LeaderDetailsActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_layout" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/examname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:text="djahskd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_titlebar" />
+
+            <TextView
+                android:id="@+id/total_participation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/examname"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:text="Total participantes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_very_small"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/allpartciptorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/myPositionLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myimage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_placeholder_user" />
+
+                    <TextView
+                        android:id="@+id/myname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/myimage1"
+                        tools:text="Nazmus Sakib Dip"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/scorebutton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/myname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_btn_accent"
+                        android:backgroundTint="@color/lightOrange"
+                        android:paddingStart="@dimen/dp_5"
+                        android:paddingLeft="@dimen/dp_5"
+                        android:paddingEnd="@dimen/dp_5"
+                        android:paddingRight="@dimen/dp_5"
+                        android:text="Level 5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/myexamdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myname"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/myimage1"
+                        android:fontFamily="@font/poppins_bold"
+                        tools:text="4 december 2021"
+                        android:textColor="@color/ash"
+                        android:textSize="@dimen/text_small1" />
+
+
+                    <TextView
+                        android:id="@+id/serial_number2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_btn_accent"
+                        android:backgroundTint="@color/lightGreen"
+                        android:paddingStart="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        tools:text="20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/scorerlayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myexamdate"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_toEndOf="@+id/myimage1"
+                        tools:text="Scorer : "
+                        android:textSize="@dimen/text_small" />
+
+                    <Button
+                        android:id="@+id/scoreCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myexamdate"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_toEndOf="@+id/scorerlayout1"
+                        android:background="@drawable/bg_btn_accent"
+                        android:backgroundTint="@color/darkAsh"
+                        android:includeFontPadding="false"
+                        android:minHeight="0dp"
+                        tools:text="75/100"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/myPositionLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_8"
+                        android:textSize="@dimen/text_medium"
+                        android:text="You have not participated in this exam."
+                        android:textColor="@color/newblack"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/Noparticipatonlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No participant" />
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/tablayoutcolor"
+                    android:gravity="center">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/exam_slider_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        app:layout_constraintTop_toBottomOf="@+id/relativeLayout_top">
+
+                        <com.gmpire.guruklub.view.customView.CustomViewPager
+                            android:id="@+id/viewPagerLeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fillViewport="true"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.rd.PageIndicatorView
+                        android:id="@+id/leaderPagerPageIndicatorView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/exam_slider_layout"
+                        app:piv_animationType="worm"
+                        app:piv_dynamicCount="true"
+                        app:piv_interactiveAnimation="true"
+                        app:piv_padding="6dp"
+                        app:piv_radius="6dp"
+                        app:piv_selectedColor="@color/white"
+                        app:piv_unselectedColor="@color/grey"
+                        app:piv_viewPager="@id/viewPagerLeader" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLeaderBoard2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:visibility="visible"
+                        tools:listitem="@layout/item_leader_board_horizontal" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</layout>

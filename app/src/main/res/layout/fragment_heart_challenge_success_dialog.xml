@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutContSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/level_up_congrats_with_glow_background"
+            tools:context=".view.activity.gameheart.HeartChallengeSuccessDialogFragment">
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_35"
+                android:paddingRight="@dimen/dp_45"
+                android:src="@drawable/level_up_congrats_png"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.43" />
+
+            <TextView
+                android:id="@+id/textViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="GuruKlub"
+                android:textColor="@color/white"
+                android:textFontWeight="30"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.13999999" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRewardHearts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:shadowColor="@color/green"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="25"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp_50"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49"
+                tools:text="500" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icvUserIcon"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@drawable/ic_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+            <TextView
+                android:id="@+id/tvUserNameSuccess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:fontFamily="@font/poppins_bold"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icvUserIcon"
+                tools:text="Lorem Ipsum" />
+
+            <TextView
+                android:id="@+id/tvChallengeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:textAlignment="center"
+                android:textColor="@color/newwhite"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserNameSuccess"
+                app:layout_constraintVertical_bias="0.00999999"
+                tools:text="You won the challenge!" />
+
+            <TextView
+                android:id="@+id/tvShareSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:text="@string/share_now"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableRight="@drawable/ic_share_option"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvChallengeText"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutCollectNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvChallengeText"
+                app:layout_constraintVertical_bias="0.14">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yellow_box_with_colorfull_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:shadowColor="@color/newGray"
+                    android:shadowDx="4"
+                    android:shadowDy="6"
+                    android:shadowRadius="10"
+                    android:text="Collect now"
+                    android:textColor="@color/newwhite"
+                    android:textSize="@dimen/text_large" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</layout>

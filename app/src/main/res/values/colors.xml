@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#4A148C</color>
+    <color name="colorPrimaryDark">#401675</color>
+
+    <color name="colorPrimaryLight">#7530CA</color>
+    <color name="colorPrimaryLighter">#A377D8</color>
+    <color name="lessLightBlue">#D5D5F3</color>
+    <color name="lightBlue">#FDFDFF</color>
+    <color name="colorAccent">#DF1855</color>
+    <color name="colorSelectedEdt">#E65100</color>
+    <color name="white">#FFF</color>
+    <color name="red">#F00</color>
+    <color name="pink_500">#e91e63</color>
+    <color name="hints">#E0E0E0</color>
+    <color name="gray">#E0E0E0</color>
+    <color name="toolbar">#303f9f</color>
+    <color name="signupColor">#00b6c5</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="semi_transparent">#55a9a9a9</color>
+    <color name="semi_transparent_white">#99ffffff</color>
+    <color name="default_color">#979797</color>
+    <color name="text_color_hint">#a9a9a9</color>
+    <color name="super_light_grey">#F6F6F6</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="lighter_grey">#E1E1E1</color>
+    <color name="grey">#a9a9a9</color>
+    <color name="black">#000</color>
+    <color name="black_overlay_4">#e8000000</color>
+    <color name="right">#00E800</color>
+    <color name="wrong">#E80000</color>
+    <color name="text_accent">#3f51b5</color>
+    <color name="text_color_accent">#3f51b5</color>
+    <color name="text_color_control_normal">#55a9a9a9</color>
+    <color name="text_color_control_activated">#3f51b5</color>
+    <color name="blue_3">#f4f5fe</color>
+    <color name="correct_color">#0c80f4</color>
+    <color name="wrong_color">#ff0000</color>
+    <color name="unanswered_color">#f1d40c</color>
+    <color name="own_leader_board">#7747b8da</color>
+    <color name="green500">#4caf50</color>
+    <color name="yellow500">#ffeb3b</color>
+    <color name="background">#dddddd</color>
+
+
+    <!---  New Colors   -->
+    <color name="colorPrimaryNew">#4A148C</color>
+    <color name="purple">#8622A6</color>
+    <color name="orange">#EB4336</color>
+    <color name="colorAccentNew">#DF1855</color>
+    <color name="darkAsh">#757575</color>
+    <color name="lightAsh">#ECECEC</color>
+    <color name="ash">#C5C5C5</color>
+    <color name="colorPrimaryText">#363636</color>
+    <color name="palePurple">#A864A8</color>
+    <color name="paleLime">#7CC576</color>
+    <color name="lightRed">#F26D7D</color>
+    <color name="green">#00A99D</color>
+    <color name="yellow">#F3E038</color>
+    <color name="lightOrange">#F26C4F</color>
+    <color name="lightBrick">#E8A9A9</color>
+    <color name="indigo">#7DA7D9</color>
+    <color name="newAshColor">#a5a5a5</color>
+    <color name="newwhite">#ffffff</color>
+    <color name="tablayoutcolor">#7ACCC8</color>
+    <color name="smalltextcolor">#999999</color>
+    <color name="scorebuttonleaderboardDetails">#ACACAC</color>
+    <color name="newblack">#191919</color>
+    <color name="lightGreen">#92C745</color>
+    <color name="lightViolet">#9E6FD8</color>
+    <color name="brightOrange">#FFA304</color>
+    <color name="darkOrange">#E05B2D</color>
+    <color name="paleBlue">#5466B4</color>
+    <color name="paleOrange">#FFC548</color>
+    <color name="wrongRed">#D81E4E</color>
+    <color name="newGray">#707070</color>
+    <color name="scoreText">#ED145B</color>
+    <color name="lightBlack">#575757</color>
+    <color name="lightGray1">#F3F3F3</color>
+    <color name="deepAsh">#5B5B5B</color>
+    <color name="weakPerformance">#D24141</color>
+    <color name="mediumPerformance">#44BAC4</color>
+    <color name="option4TintColor">#1CBBB4</color>
+    <color name="purpleGraph">#5566B4</color>
+    <color name="greenGraph">#3CB879</color>
+    <color name="blueGraph">#0072BB</color>
+    <color name="deepblack">#000000</color>
+    <color name="lightash1">#D6D6D6</color>
+    <color name="deepAsh1">#848484</color>
+    <color name="option3TintColor">#448CCB</color>
+    <color name="horizontalview1">#CFCED1</color>
+
+    <color name="lightBrownFilter">#FFDCB6</color>
+    <color name="lightGreenFilter">#A7D9B9</color>
+    <color name="lightTealFilter">#9EC9C7</color>
+    <color name="lightBlueFilter">#9BB6D6</color>
+    <color name="lightPinkFilter">#FB9DC8</color>
+
+    <color name="blueTabBorder">#7599B8</color>
+
+
+    <color name="column2color">#E8E7E7</color>
+    <color name="tablelayoutcolor1">#605CA8</color>
+    <color name="bookmarkedHorizontalview">#39B54A</color>
+    <color name="shareHorizontalview">#F68E56</color>
+    <color name="reportHorizontalview">#0072BC</color>
+    <color name="gamescreentextcolor">#ffd904</color>
+    <color name = "subscriptionbg1">#6aa744</color>
+    <color name="subscriptionbg3">#dd0886</color>
+    <color name = "gamepageusertitlecolor">#ffc102</color>
+    <color name = "disabledbtncolor">#951670</color>
+    <color name = "disabledtextcolor">#cea7c0</color>
+    <color name = "edittextbgcolor2">#c1c1c1</color>
+    <color name = "game_black_bg">#350e57</color>
+    <color name ="home_page_first_row">#f2f2f2</color>
+    <color name="game_background_blue">#39c7f4</color>
+    <color name = "dashboard_live_exam_background">#447ec1</color>
+    <color name="dashboard_model_test_background">#9344c1</color>
+    <color name="dashboard_previous_question_background">#a8cf38</color>
+    <color name="dashboard_current_affiers">#d26b28</color>
+    <color name = "dashboard_library">#fdb747</color>
+    <color name = "dashboard_all_video">#1e936b</color>
+    <color name = "dashboard_add_question">#fdd947</color>
+
+</resources>

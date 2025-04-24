@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gmpire.guruklub.view.customView.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollViewItemGameQuestion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutQuestionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/bg_score_dark"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLevelTxt">
+
+                <TextView
+                    android:id="@+id/question_title_tv_game_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/question_title_tv_math_game_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/sp_5"
+                    android:scrollbars="none"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_primary"
+                    app:engine="MathJax" />
+
+                <ImageView
+                    android:id="@+id/question_image_iv_game_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_130"
+                    android:layout_below="@+id/title_layout"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_banner" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutQuestionTitle"
+                app:layout_constraintVertical_bias="0.0">
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBackPressed"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_57"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_box_with_colorfull_bg"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:shadowColor="@color/newGray"
+                android:shadowDx="4"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSkipQuestion"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_57"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_box_with_colorfull_bg"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:shadowColor="@color/newGray"
+                android:shadowDx="4"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="Skip"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReportQuestion"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_57"
+                android:layout_weight="1"
+                android:alpha=".5"
+                android:background="@drawable/yellow_box_with_colorfull_bg"
+                android:clickable="false"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:shadowColor="@color/newGray"
+                android:shadowDx="4"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="Report"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.gmpire.guruklub.view.customView.CustomScrollView>

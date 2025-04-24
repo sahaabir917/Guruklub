@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp_3"
+            app:cardCornerRadius="@dimen/dp_16"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginTop="-5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/wrongAnswerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D24141">
+
+
+                    <TextView
+                        android:id="@+id/wrongAnswerText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="@dimen/dp_5"
+                        android:text="wrong answer"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/viewColorBorder"
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:background="@color/red"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/question_root_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_12">
+
+
+                        <io.github.kexanie.library.MathView
+                            android:id="@+id/tvTitleMath"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:lineSpacingExtra="8sp"
+                            android:scrollbars="none"
+                            android:textSize="@dimen/text_medium"
+                            app:engine="MathJax"
+                            app:layout_constraintBottom_toTopOf="@+id/tvAnswerMath"
+                            app:layout_constraintEnd_toStartOf="@+id/status_iv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.13999999" />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:lineSpacingExtra="8sp"
+                            android:scrollbars="none"
+                            android:textSize="@dimen/text_medium"
+                            app:layout_constraintEnd_toStartOf="@+id/status_iv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/right_icon2"
+                            android:layout_width="@dimen/dp_18"
+                            android:layout_height="@dimen/dp_18"
+                            android:paddingTop="@dimen/dp_2"
+                            android:paddingBottom="@dimen/dp_2"
+                            android:src="@drawable/ic_green_tick"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvAnswer"
+                            app:layout_constraintEnd_toStartOf="@+id/levelofcorrectansformath"
+                            app:layout_constraintStart_toStartOf="@+id/tvTitleMath"
+                            app:layout_constraintTop_toTopOf="@+id/tvAnswer" />
+
+                        <TextView
+                            android:id="@+id/levelofcorrectansformath"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/right_icon2"
+                            app:layout_constraintStart_toEndOf="@+id/right_icon2"
+                            app:layout_constraintTop_toTopOf="@+id/right_icon2" />
+
+                        <io.github.kexanie.library.MathView
+                            android:id="@+id/tvAnswerMath"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:lineSpacingExtra="7sp"
+                            android:scrollbars="none"
+                            android:textColor="#616161"
+                            android:textSize="@dimen/text_small"
+                            app:engine="MathJax"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/status_iv"
+                            app:layout_constraintStart_toEndOf="@+id/levelofcorrectansformath"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                            app:layout_constraintTop_toTopOf="@+id/levelofcorrectansformath" />
+
+
+                        <ImageView
+                            android:id="@+id/right_icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_correcticon3"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvAnswer"
+                            app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+                        <TextView
+                            android:id="@+id/tvAnswer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:lineSpacingExtra="7sp"
+                            android:scrollbars="none"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/status_iv"
+                            app:layout_constraintStart_toEndOf="@+id/levelofcorrectansformath"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                            app:layout_constraintTop_toTopOf="@+id/levelofcorrectansformath" />
+
+                        <TextView
+                            android:id="@+id/tvAnswer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_8"
+                            android:lineSpacingExtra="2sp"
+                            android:scrollbars="none"
+                            android:textColor="#616161"
+                            android:textSize="13sp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+                        <ImageView
+                            android:id="@+id/status_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+                            app:layout_constraintEnd_toStartOf="@+id/bookmark_iv"
+                            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+                        <ImageView
+                            android:id="@+id/bookmark_iv"
+                            android:layout_width="@dimen/dp_28"
+                            android:layout_height="@dimen/dp_28"
+                            android:src="@drawable/ic_unbookmarked_png"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout_native_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</layout>

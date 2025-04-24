@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:theme="@style/TransparentBottomSheetDialogTheme"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_collapseMode="pin">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_list_background_top_rounded"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/post_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+
+            <ImageView
+                android:id="@+id/close_btn_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/answer_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="10dp"
+                android:text="Find us on"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/close_btn_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/close_btn_iv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/facebook_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/answer_status_tv">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_facebook_2" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:lineSpacingExtra="9sp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="Find us on Facebook" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/linked_in_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="parent">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_linkedin" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:lineSpacingExtra="9sp"
+                android:text="Find us on Linkedin"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/twitter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/answer_status_tv">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_twitter" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:lineSpacingExtra="9sp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="Find us on Twitter" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/youtube_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/linked_in_layout">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_youtube" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:lineSpacingExtra="9sp"
+                android:text="Find us on Youtube"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

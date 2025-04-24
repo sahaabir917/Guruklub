@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userInfo"
+            type="com.gmpire.guruklub.data.model.login.UserInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/page_level_background"
+        tools:context=".view.activity.gamelevel.GameLevelActivity">
+
+        <FrameLayout
+            android:id="@+id/play_with_friend_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_for_game_level"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/game_rule_layout"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="@+id/heartlayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rounded_details_with_background" />
+
+            <RelativeLayout
+                android:id="@+id/heartlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.884"
+                app:layout_constraintStart_toEndOf="@+id/game_rule_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01">
+
+                <ImageView
+                    android:id="@+id/bluebox"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/blue_box_with_deep_black_background" />
+
+                <ImageView
+                    android:id="@+id/lifelayout"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="-10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/game_life_plus2" />
+
+
+                <TextView
+                    android:id="@+id/my_life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/lifelayout"
+                    android:fontFamily="@font/poppins_bold"
+                    android:shadowColor="@color/newGray"
+                    android:shadowDx="4"
+                    android:shadowDy="6"
+                    android:shadowRadius="10"
+                    android:textColor="@color/newwhite"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    tools:text="2500" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heartlayout">
+
+                <RelativeLayout
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/game_user_pic_side_background" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profile_pic"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/game_user_image_background" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Welcome"
+                        android:textColor="@color/gamepageusertitlecolor"
+                        android:textSize="@dimen/text_extra_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="@{userInfo.userElipsName()}"
+                        android:textColor="@color/newwhite"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/button2"
+                        app:layout_constraintEnd_toEndOf="@+id/textView15"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15"
+                        app:layout_constraintVertical_bias="0.08"
+                        tools:text="Rashed Khan Arif" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout12"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout12"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/play_with_friend_coloring_bg">
+
+                    <ImageView
+                        android:id="@+id/play_with_friend_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:src="@drawable/play_with_friend_icon_sign" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_18"
+                        android:layout_toEndOf="@+id/play_with_friend_icon"
+                        android:text="Play with friends"
+                        android:textColor="@color/newwhite"
+                        android:textSize="@dimen/sp_14" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/level_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_3"
+                android:scrollbarStyle="insideInset"
+                android:scrollbarThumbVertical="@drawable/game_scrolbar_thumb"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
+                app:layout_constraintVertical_bias="0.1"
+                tools:listitem="@layout/item_level_page" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/exitlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/yellow_box_with_colorfull_bg"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="Exit"
+                        android:textColor="@color/newwhite"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/settings_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/yellow_box_with_colorfull_bg"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="Settings"
+                        android:textColor="@color/newwhite"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarGameLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:indeterminateTint="@color/brightOrange"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

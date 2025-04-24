@@ -1,0 +1,149 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nav_header_bg"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_16"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_iv"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                tools:text="Joy Gosh"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_image_iv"
+                app:layout_constraintTop_toTopOf="@+id/profile_image_iv" />
+
+            <TextView
+                android:id="@+id/user_phone_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="ghoshjoy69@gmail.com"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/user_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/user_name_tv" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:background="@drawable/bg_btn_white"
+                android:backgroundTint="@color/brightOrange"
+                android:includeFontPadding="false"
+                android:textAlignment="center"
+                android:text="level - 1"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/user_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/user_name_tv"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <RelativeLayout
+                android:id="@+id/lifeamountlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_white"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.31"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3">
+
+
+                <ImageView
+                    android:id="@+id/lifeicon"
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/life_icon_white_png" />
+
+                <TextView
+                    android:id="@+id/lifeamounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_toEndOf="@+id/lifeicon"
+                    android:text=": 0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_close_drawer"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:padding="@dimen/dp_5"
+            android:layout_margin="@dimen/dp_8"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_cross_drawer" />
+
+
+    </RelativeLayout>
+
+
+</layout>

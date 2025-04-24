@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/questionDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_weight="0.8"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginBottom="@dimen/dp_12"
+                            android:background="@color/white" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <io.github.kexanie.library.MathView
+                                android:id="@+id/tvTitleMath"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="5sp"
+                                android:scrollbars="none"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:engine="MathJax" />
+
+                            <TextView
+                                android:id="@+id/tvTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="5sp"
+                                android:scrollbars="none"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/options_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp_5"
+                        android:src="@drawable/ic_options" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewBatchList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingLeft="0dp"
+                    android:visibility="visible"
+                    tools:listitem="@layout/item_filter_selected" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_155"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="35dp"
+                android:lineSpacingExtra="9sp"
+                android:text="Options"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/ivQuestion"
+                app:layout_constraintStart_toStartOf="@+id/ivQuestion"
+                app:layout_constraintTop_toBottomOf="@+id/ivQuestion" />
+
+            <LinearLayout
+                android:id="@+id/option_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="35dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/tvOptionsMath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:scrollbars="none"
+                    android:textColor="#616161"
+                    android:textSize="15sp"
+                    app:engine="MathJax"
+                    app:layout_constraintEnd_toEndOf="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9"
+                    tools:text="Lorem ipsum dolor sit amet consect" />
+
+                <TextView
+                    android:id="@+id/tvOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:scrollbars="none"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9"
+                    tools:text="Lorem ipsum dolor sit amet consect" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="35dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/ivQuestion"
+                app:layout_constraintStart_toStartOf="@+id/ivQuestion"
+                app:layout_constraintTop_toBottomOf="@+id/ivQuestion">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="9sp"
+                    android:text="Answer : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:scrollbars="none"
+                    android:textSize="@dimen/text_primary"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                    app:layout_constraintStart_toEndOf="@+id/textView9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView9"
+                    tools:text="Lorem ipsum asdjasgdjasjasdgasj dolor sit amet consect" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/tvAnswerMath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:scrollbars="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:engine="MathJax"
+                    app:layout_constraintEnd_toEndOf="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9"
+                    tools:text="Lorem ipsum dolor sit amet consect" />
+
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/batch_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_35"/>
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="35dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="9sp"
+                android:text="Explanation :"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvAnswer"
+                app:layout_constraintStart_toStartOf="@+id/tvAnswer"
+                app:layout_constraintTop_toBottomOf="@+id/tvAnswer" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <io.github.kexanie.library.MathView
+                    android:id="@+id/tvExplanationMath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:scrollbars="none"
+                    android:textColor="#1e1e1e"
+                    android:textSize="@dimen/text_small"
+                    app:engine="MathJax"
+                    app:layout_constraintEnd_toEndOf="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. " />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvExplanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <WebView
+                    android:id="@+id/webExplanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:lineSpacingExtra="8sp"
+                    android:longClickable="false"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonRelatedVideo"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_35"
+            android:background="@drawable/bg_btn_accent"
+            android:text="View All Related Videos"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_small"
+            android:layout_below="@+id/questionDetailsLayout"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginEnd="@dimen/dp_23"
+            android:layout_marginBottom="@dimen/dp_25"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

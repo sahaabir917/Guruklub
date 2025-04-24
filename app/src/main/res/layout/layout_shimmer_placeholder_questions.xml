@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_16">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/placeholderTextHeight"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/background" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/placeholderTextHeight"
+                android:layout_marginRight="@dimen/dp_56"
+                android:background="@color/background" />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/placeholderTextHeight"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginRight="@dimen/dp_86"
+                android:background="@color/background" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2">
+
+            <View
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@color/background"
+                android:padding="@dimen/dp_10" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

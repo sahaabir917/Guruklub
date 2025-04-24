@@ -1,0 +1,1029 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ScrollView
+            android:id="@+id/scrollViewNavDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tutorial_nav_menu"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/nav_menu_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_36"
+                android:layout_marginRight="@dimen/dp_36"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dashboard_nav_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewDashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user_white"
+                        android:tint="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewDashboardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/my_dashboard"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewDashboard"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewDashboard"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewDashboard" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="@id/textViewDashboardTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewDashboardTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dashboard_linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profile_nav_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:text="Profile"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardProfile" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/recent_performance_nav_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardPerformance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:text="@string/recent_performance"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardPerformance" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profile_nav_performance_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardPerformanceHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="@string/performance_history"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardPerformanceHistory" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/leaderboard_nav_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardLeaderboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="@string/leaderboard"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardLeaderboard" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/error_nav_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="@string/errors"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardError" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/bookmarks_nav_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardBookmark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="@string/bookmarks"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardBookmark" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/heartadd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textViewDashboardBookmark1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="500 heart page "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDashboardBookmark1" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/allVideosLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/allvideosicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_play_hamburger_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewAllVideos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="All Videos"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/allvideosicon"
+                        app:layout_constraintStart_toEndOf="@+id/allvideosicon"
+                        app:layout_constraintTop_toTopOf="@+id/allvideosicon" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="@id/textViewAllVideos"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewAllVideos" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/previousQuestionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="-5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageviewPreviousQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/previous_question_hamburger_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textviewPreviousQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="Previous Questions"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageviewPreviousQuestion"
+                        app:layout_constraintStart_toEndOf="@+id/imageviewPreviousQuestion"
+                        app:layout_constraintTop_toTopOf="@+id/imageviewPreviousQuestion" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="@id/textviewPreviousQuestion"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewPreviousQuestion" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/library_nav_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_library_white"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:padding="5dp"
+                        android:text="Library"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/info_center_nav_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_infocenter"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:padding="5dp"
+                        android:text="InfoCentre"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settings_nav_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_setting"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:padding="5dp"
+                        android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/help_Feed_nav_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewHelpAndSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_help_and_support"
+                        android:tint="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewHelpAndSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="Help &amp; Support"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewHelpAndSupport"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewHelpAndSupport"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewHelpAndSupport" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="@id/textViewHelpAndSupport"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewHelpAndSupport" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/help_and_support_linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/contact_us_layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/how_can_help_you"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="Contact Us"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/how_can_help_you" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/new_user_faq_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/new_user_faq_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="FAQ"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/new_user_faq_layout3" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/about_xplore_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/about_xplore_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:text="About Us"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/about_xplore_layout3" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rating_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rating_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="Rate Us"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rating_layout3" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/invite_friends_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/invite_friends_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="Invite Friends"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/invite_friends_layout3" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/terms_condition_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/terms_condition_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_30"
+                            android:text="Terms &amp; Conditions"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/colorPrimaryDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/terms_condition_layout3" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/logout_nav_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:src="@drawable/ic_sign_out"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="Log out"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/purchaseheartlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/purchase_now_btn"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_btn_ancent1"
+                        android:text="Purchase Now"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/refer_and_invite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/referbtn"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_btn_ancent1"
+                        android:text="Refer and Earn "
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/tutorial_nav_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_video"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:padding="5dp"
+                android:text="How it works?"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrollViewNavDrawer"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_26"
+                android:text="Connect with us:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/facebook_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/answer_status_tv">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_facebook_f" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:lineSpacingExtra="9sp"
+                        android:text="Find us on Facebook"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/youtube_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_youtube_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:lineSpacingExtra="9sp"
+                        android:text="Find us on Youtube"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twitter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_twitter_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:lineSpacingExtra="9sp"
+                        android:text="Find us on Twitter"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linked_in_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_linkedin_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:lineSpacingExtra="9sp"
+                        android:text="Find us on LinkedIN"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/instagram_in_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_instagram" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:lineSpacingExtra="9sp"
+                        android:text="Find us on Instagram"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

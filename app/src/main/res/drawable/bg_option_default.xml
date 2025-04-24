@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:maxLevel="0"
+        android:minLevel="0">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#E511DE" />
+            <corners android:radius="25dp" />
+            <gradient
+                android:angle="270"
+                android:centerColor="#8723C1"
+                android:endColor="#A227B0"
+                android:startColor="#E511DE" />
+        </shape>
+    </item>
+
+    <item
+        android:maxLevel="1"
+        android:minLevel="1">
+        <shape android:shape="rectangle">
+
+            <stroke
+                android:width="2dp"
+                android:color="#707070" />
+
+            <corners android:radius="25dp" />
+
+            <gradient
+                android:angle="270"
+                android:centerColor="#329B04"
+                android:endColor="#BCFF07"
+                android:startColor="#EEFD4C" />
+
+        </shape>
+    </item>
+
+    <item
+        android:maxLevel="2"
+        android:minLevel="2">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#707070" />
+
+            <corners android:radius="25dp" />
+
+            <gradient
+                android:angle="270"
+                android:centerColor="#AA0303"
+                android:endColor="#FF0707"
+                android:startColor="#FD4C4C" />
+        </shape>
+    </item>
+</level-list>

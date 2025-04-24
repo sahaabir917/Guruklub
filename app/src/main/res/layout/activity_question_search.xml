@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".view.activity.questionSearch.QuestionSearchActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/lightGray1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ash_border"
+                    android:gravity="center_vertical"
+                    android:layout_margin="@dimen/dp_16"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageViewSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="0.1"
+                        app:srcCompat="@drawable/ic_search_grey" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/appCompatEditTextSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="0.8"
+                        android:textSize="@dimen/sp_13"
+                        android:background="@android:color/transparent"
+                        android:hint="Search here..." />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageViewCross"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:layout_marginEnd="@dimen/dp_6"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_close_grey" />
+
+                </LinearLayout>
+
+
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_8">
+
+                    <TextView
+                        android:id="@+id/empty_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="No Data Found"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recent_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/rv_search_questions"
+                            android:paddingStart="@dimen/dp_5"
+                            android:paddingLeft="@dimen/dp_5"
+                            android:text="Recent Searches"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_search_questions"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            tools:listitem="@layout/item_question_linear" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

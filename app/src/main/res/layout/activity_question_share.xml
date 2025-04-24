@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/share_content_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/ic_close_grey"
+            android:elevation="3dp"
+            android:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_question_option_layout"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/textView_app_typo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="GuruKlub"
+                        android:textSize="@dimen/sp_24"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView_app_typo">
+
+                        <io.github.kexanie.library.MathView
+                            android:id="@+id/question_title_tv_math"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="6sp"
+                            android:paddingStart="@dimen/dp_10"
+                            android:scrollbars="none"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            app:engine="MathJax"
+                            app:layout_constraintEnd_toStartOf="@+id/options_iv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/question_title_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:lineSpacingExtra="6sp"
+                            android:textColor="@color/black"
+                            android:scrollbars="none"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_layout">
+
+                        <ImageView
+                            android:id="@+id/question_image_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_profile_banner" />
+
+                        <LinearLayout
+                            android:id="@+id/optionsll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                            app:layout_constraintStart_toStartOf="@+id/guideline3"
+                            app:layout_constraintTop_toBottomOf="@+id/question_image_iv">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_ancent1"
+            android:elevation="3dp"
+            android:fontFamily="@font/roboto_medium"
+            android:stateListAnimator="@null"
+            android:text="share"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

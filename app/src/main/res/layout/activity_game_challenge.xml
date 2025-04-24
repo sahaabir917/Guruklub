@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/page_level_background"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".view.activity.gameLevelQuestion.GameLevelQuestionActivity">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLevelTxt"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:background="@drawable/blue_box_with_deep_black_background"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:shadowColor="@color/newGray"
+                    android:shadowDx="4"
+                    android:shadowDy="6"
+                    android:shadowRadius="10"
+                    android:text="Challenge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvUpdateHeart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_48"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="+1"
+                    android:textColor="@color/yellow500"
+                    android:textSize="@dimen/sp_18"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLevelTxt"
+                    app:layout_constraintEnd_toStartOf="@+id/relativeLayoutHeartQuestion"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvLevelTxt"
+                    app:layout_constraintTop_toTopOf="@+id/tvLevelTxt" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutHeartQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrentHearts"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_32"
+                        android:background="@drawable/blue_box_with_deep_black_background"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        tools:text="5" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHeartAdd"
+                        android:layout_width="@dimen/dp_84"
+                        android:layout_height="@dimen/dp_84"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/game_life_plus" />
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTimeScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_16"
+                android:weightSum="3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLevelTxt">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="Score"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/deep_blue_with_black_bg"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingBottom="@dimen/dp_8">
+
+                        <TextView
+                            android:id="@+id/tvCurrentLevelScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:shadowColor="@color/newGray"
+                            android:shadowDx="4"
+                            android:shadowDy="6"
+                            android:shadowRadius="10"
+                            android:textColor="#FFD904"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold"
+                            tools:text="95" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="Target"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/deep_blue_with_black_bg">
+
+                        <TextView
+                            android:id="@+id/tvTargetScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:shadowColor="@color/newGray"
+                            android:shadowDx="4"
+                            android:shadowDy="6"
+                            android:shadowRadius="10"
+                            android:textColor="#FFD904"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold"
+                            tools:text="100" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/newGray"
+                        android:shadowDx="4"
+                        android:shadowDy="6"
+                        android:shadowRadius="10"
+                        android:text="Time"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/deep_blue_with_black_bg">
+
+                        <TextView
+                            android:id="@+id/textViewTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:shadowColor="@color/newGray"
+                            android:shadowDx="4"
+                            android:shadowDy="6"
+                            android:shadowRadius="10"
+                            android:text=""
+                            android:textColor="#FFD904"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.gmpire.guruklub.util.NonSwipeableViewPager2
+                android:id="@+id/challenge_questions_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_20" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarGameChallenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:alpha="0.5"
+            android:indeterminateTint="@color/brightOrange"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

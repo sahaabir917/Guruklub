@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_5">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_rounded_red"
+            android:backgroundTint="@color/lightBrick"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/radio_btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:includeFontPadding="false"
+        android:scrollbars="none"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        tools:text="ASDASDASDSDASDdasdasdasdasdasdasdasddsfdsfsdffdssdf" />
+
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/math_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp_5"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:engine="MathJax" />
+
+</LinearLayout>

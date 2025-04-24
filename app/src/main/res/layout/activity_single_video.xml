@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.library.SingleVideoActivity">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTBWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_video"
+                layout="@layout/toolbar_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/colorPrimaryNew"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <Button
+                android:id="@+id/addVideoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_20"
+                android:background="@drawable/bg_btn_ancent1"
+                android:drawableLeft="@drawable/ic_plus_white"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:padding="@dimen/dp_3"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_5"
+                android:text="Add Videos"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbarlayouts"
+                app:layout_constraintVertical_bias="0.049" />
+
+            <Button
+                android:id="@+id/reportLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/bg_btn_ancent1"
+                android:drawableLeft="@drawable/ic_play"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:padding="@dimen/dp_3"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_5"
+                android:text="Report Videos"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_video">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_210">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutVideoLeft"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutVideoRight"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:src="@color/black"
+                app:showFullScreenButton="true"/>
+
+
+
+            <TextView
+                android:id="@+id/tvSeekMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/grey"
+                tools:text="msg" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view">
+
+            <TextView
+                android:id="@+id/textView_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="Title Sample"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="Similar Videos"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/videoViewerRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_related_videos" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

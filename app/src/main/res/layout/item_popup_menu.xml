@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/dp_20"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@android:color/transparent"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/filter_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7sp"
+                android:padding="15dp"
+                android:text="Filter"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@color/lightAsh" />
+
+        <LinearLayout
+            android:id="@+id/bookmark_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/viewColorBorder"
+                android:layout_width="@dimen/dp_3"
+                android:layout_height="match_parent"
+                android:background="@color/bookmarkedHorizontalview"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_bookmark"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:src="@drawable/without_background_unbookmark_png" />
+
+            <TextView
+                android:id="@+id/bookmark_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7sp"
+                android:padding="5dp"
+                android:text="Bookmark"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@color/lightAsh" />
+
+        <LinearLayout
+            android:id="@+id/share_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+
+            <View
+                android:id="@+id/viewColorBorder2"
+                android:layout_width="@dimen/dp_3"
+                android:layout_height="match_parent"
+                android:background="@color/shareHorizontalview"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:src="@drawable/ic_share_png" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7sp"
+                android:padding="5dp"
+                android:text="Share"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@color/lightAsh" />
+
+        <LinearLayout
+            android:id="@+id/download_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/viewColorBorder3"
+                android:layout_width="@dimen/dp_3"
+                android:layout_height="match_parent"
+                android:background="@color/option4TintColor"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:src="@drawable/ic_download_png" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7sp"
+                android:padding="5dp"
+                android:text="Download"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@color/lightAsh" />
+
+        <LinearLayout
+            android:id="@+id/report_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/viewColorBorder4"
+                android:layout_width="@dimen/dp_3"
+                android:layout_height="match_parent"
+                android:background="@color/reportHorizontalview"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:src="@drawable/ic_report_png" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7sp"
+                android:padding="5dp"
+                android:text="Report"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@color/lightAsh" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

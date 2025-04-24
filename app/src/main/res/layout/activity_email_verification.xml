@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rootLayout"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.article_details.ArticleDetailsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="6sp"
+            android:text="GuruKlub"
+            android:textColor="@color/colorAccent"
+            android:textSize="42sp"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="3sp"
+            android:text="GuruKlub will send you a 6 digit verification code in your email account. Sometimes you may find it in your spam."
+            android:textColor="#353535"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="25dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/verification_code_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 6 digit code"
+                android:padding="@dimen/dp_12"
+                android:background="@drawable/bg_input_outlined"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/btn_size"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_accent"
+            android:text="Go"
+            android:textAllCaps="false"
+            android:textColor="@drawable/primary_btn_text_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/resend_btn_layout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+        <FrameLayout
+            android:id="@+id/resend_btn_layout"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnGo"
+            app:layout_constraintTop_toTopOf="@+id/btnGo">
+
+            <Button
+                android:id="@+id/resend_btn"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_secondary"
+                android:lineSpacingExtra="9sp"
+                android:text="Resend"
+                android:textColor="#536dfe"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/countdown_timer_tv"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:lineSpacingExtra="9sp"
+                android:text="1:00"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

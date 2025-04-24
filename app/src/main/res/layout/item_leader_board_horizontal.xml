@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/serial_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="4."
+                    android:textColor="#191919"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_picture1"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_toEndOf="@id/serial_number"
+                    android:src="@drawable/ic_placeholder_user" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearlayout12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toEndOf="@+id/profile_picture1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/candidate_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="Nazmus SAkib Dip"
+                        android:textSize="@dimen/text_small"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/levelnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_20"
+                            android:layout_gravity="start"
+                            android:background="@drawable/bg_rounded_button_with_darkash"
+                            android:text="lever : 88"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/examdate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 dec 2020, 8.45pm "
+                            android:textColor="@color/smalltextcolor"
+                            android:textSize="@dimen/text_very_small" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/scorebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:background="@drawable/bg_btn_accent"
+                    android:backgroundTint="@color/ash"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:text="95/100"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_very_small" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
+

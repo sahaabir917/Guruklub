@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/heart_0" android:duration="100" />
+    <item android:drawable="@drawable/heart_1" android:duration="100" />
+    <item android:drawable="@drawable/heart_2" android:duration="100" />
+    <item android:drawable="@drawable/heart_3" android:duration="100" />
+    <item android:drawable="@drawable/heart_4" android:duration="100" />
+    <item android:drawable="@drawable/heart_5" android:duration="100" />
+    <item android:drawable="@drawable/heart_6" android:duration="100" />
+    <item android:drawable="@drawable/heart_7" android:duration="100" />
+    <item android:drawable="@drawable/heart_8" android:duration="100" />
+    <item android:drawable="@drawable/heart_9" android:duration="100" />
+    <item android:drawable="@drawable/heart_10" android:duration="100" />
+    <item android:drawable="@drawable/heart_11" android:duration="100" />
+    <item android:drawable="@drawable/heart_12" android:duration="100" />
+    <item android:drawable="@drawable/heart_13" android:duration="100" />
+    <item android:drawable="@drawable/heart_14" android:duration="100" />
+    <item android:drawable="@drawable/game_life_plus" android:duration="100" />
+</animation-list>

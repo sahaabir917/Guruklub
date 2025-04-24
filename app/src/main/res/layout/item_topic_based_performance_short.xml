@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/subject_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="Tense"
+            />
+
+        <TextView
+            android:id="@+id/success_rate_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_12"
+            android:textColor="#000000"
+            android:lineSpacingExtra="@dimen/sp_17"
+            android:text="66(2/3)"
+            />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_12"
+            android:textColor="#000000"
+            android:lineSpacingExtra="@dimen/sp_17"
+            android:text="62 s"
+            />
+
+        <TextView
+            android:id="@+id/go_to_topic_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:lineSpacingExtra="@dimen/sp_17"
+            android:visibility="gone"
+            android:text="Go to topics"
+            />
+
+    </LinearLayout>
+
+</layout>
